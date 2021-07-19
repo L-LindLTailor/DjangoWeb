@@ -12,6 +12,8 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 import os
 from pathlib import Path
 
+S_KEY = os.environ.get('djangokey')
+SEC_KEY = f"'{S_KEY}'"
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 
 # Версия для dev
@@ -24,7 +26,8 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-5$e#5q10t+4oxypwy=b5#v%6k^m*mm4l^=(pp$fxt+os^&#spp'
+# 'django-insecure-5$e#5q10t+4oxypwy=b5#v%6k^m*mm4l^=(pp$fxt+os^&#spp'
+SECRET_KEY = SEC_KEY
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
